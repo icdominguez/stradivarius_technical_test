@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Stradivariustechnicaltest" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <style name="Theme.Stradivariustechnicaltest.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenAnimatedIcon">@drawable/stradivarius_logo</item>
+        <item name="postSplashScreenTheme">@style/Theme.Stradivariustechnicaltest</item>
+    </style>
+</resources>
