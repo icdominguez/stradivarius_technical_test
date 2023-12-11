@@ -66,6 +66,7 @@ fun ContactItem(
                     style = TextStyle(
                         fontSize = MaterialTheme.typography.bodyMedium.fontSize,
                         fontWeight = FontWeight.Normal,
+                        color = Color.Gray
                     ),
                 )
             }
@@ -73,9 +74,10 @@ fun ContactItem(
             Spacer(modifier = Modifier.weight(1f))
 
             Icon(
-                modifier = Modifier.width(30.dp).height((30.dp)),
+                modifier = Modifier.width(15.dp).height((15.dp)),
                 imageVector = Icons.Default.ArrowForwardIos,
-                contentDescription = "Arrow forward"
+                contentDescription = "Arrow forward",
+                tint = Color.LightGray
             )
         }
 

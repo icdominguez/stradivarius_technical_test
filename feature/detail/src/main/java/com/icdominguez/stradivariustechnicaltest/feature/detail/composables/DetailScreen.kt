@@ -30,6 +30,7 @@ import androidx.compose.material.icons.filled.Phone
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -47,6 +48,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
@@ -63,8 +66,6 @@ fun DetailScreen(
     onBackClick: () -> Unit,
 ) {
     val state = viewModel.state.collectAsState().value
-
-    val scrollBehavior = TopAppBarDefaults.pinnedScrollBehavior()
 
     var imageSelected by remember {
         mutableStateOf<Uri>(Uri.EMPTY)
@@ -192,7 +193,12 @@ fun DetailScreen(
 
                     Text(
                         modifier = Modifier.padding(start = 70.dp),
-                        text = "Dirección"
+                        text = "Dirección",
+                        style = TextStyle(
+                            fontSize = MaterialTheme.typography.bodyMedium.fontSize,
+                            fontWeight = FontWeight.Normal,
+                            color = Color.Gray
+                        ),
                     )
 
                     Column(

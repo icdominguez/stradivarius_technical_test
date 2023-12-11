@@ -54,6 +54,7 @@ fun CustomTextField(
                 style = TextStyle(
                     fontSize = MaterialTheme.typography.bodyMedium.fontSize,
                     fontWeight = FontWeight.Normal,
+                    color = Color.Gray
                 ),
             )
             Text(
